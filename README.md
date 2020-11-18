@@ -1,5 +1,7 @@
-# Project Euler‚ğs‚¤‚½‚ß‚ÌƒvƒŠƒZƒbƒg
-rake ‚ÅÀs‰Â”\
+# Project Eulerï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ß‚Ìƒvï¿½ï¿½ï¿½Zï¿½bï¿½g
+rake ï¿½Åï¿½ï¿½sï¿½Â”\
 
 project-euler
 http://odz.sakura.ne.jp/projecteuler/
+
+test from ba-ga-
