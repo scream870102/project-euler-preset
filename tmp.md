@@ -20,3 +20,18 @@ def isPrime n
   return true
 end
 ```
+
+## function find all factor and return num of factor
+```ruby
+def findAllFactor n
+    factor=[] 
+    for i in (1..(Integer.sqrt n))
+        if n%i==0
+            other = n/i
+            factor<<i
+            factor<<other if i!=other
+        end
+    end
+    factor.length
+end
+```

@@ -29,11 +29,47 @@ def to2Dim s
   array = s.split("\n").map{|row|row.split(" ")}
 end
 
-def upDownMax a
-  a.each
+def upDownMax array
+  max = 0
+  for col in (0...20)
+    for row in (0..16)
+      tmp = array[row][col].to_i*array[row+1][col].to_i*array[row+2][col].to_i*array[row+3][col].to_i
+      max = tmp if tmp > max
+    end
+  end
+  max
 end
 
-def euler010
+def leftRightMax array
+  max = 0
+  for row in (0...20)
+    for col in (0..16)
+      tmp = array[row][col].to_i*array[row][col+1].to_i*array[row][col+2].to_i*array[row][col+3].to_i
+      max = tmp if tmp > max
+    end
+  end
+  max
+end
+
+def diagonalMax array
+  max = 0
+  for row in (0..16)
+    for col in (0..16)
+      tmp = array[row][col].to_i*array[row+1][col+1].to_i*array[row+2][col+2].to_i*array[row+3][col+3].to_i
+      max = tmp if tmp > max
+    end
+  end
+  
+  for row in (0...16)
+    for col in (0..16)
+      tmp = array[-row-1][col].to_i*array[-row-2][col+1].to_i*array[-row-3][col+2].to_i*array[-row-4][col+3].to_i
+      max = tmp if tmp > max
+    end
+  end
+  max
+end
+
+def euler011
   s="08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
   49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
   81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
@@ -55,9 +91,12 @@ def euler010
   20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
   01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"
   array = to2Dim s
-
+  lrm = leftRightMax array
+  udm = upDownMax array
+  dm = diagonalMax array
+  [lrm,udm,dm].max
 end
 
-puts euler010
+puts euler011
 
 
