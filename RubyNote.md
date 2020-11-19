@@ -1,4 +1,6 @@
 # Ruby Note
+## irb
+usefule for test
 
 ## Ruby Key words
 - unless
@@ -18,6 +20,8 @@
 - loop do `must have break to get out the loop`
 - each
 - def
+- select
+- map
 
 ## Operator
 - \+
@@ -78,6 +82,25 @@ puts ages["Amy"]
 # outputs 19
 ```
 
+## map select each in array & hash
+- **map** iterate each element and return it as an new array
+```ruby
+array = rows.map{|line| line.split(' ')}
+```
+- **each** iterate each element
+```ruby
+arr = [1,2,3]
+#用Array#each分別印出陣列裡面的所有值
+arr.each {|element| puts element } # => [1,2,3]
+arr # => [1,2,3]
+```
+- **select** add element to new arrray when condition comes to true
+```ruby
+arr = [1,2,3,4,5]
+#用Array#select來選出想要的元素(element)
+arr.select { |ele| ele > 3 } # => [4, 5]
+arr # => [1,2,3,4,5]
+```
 ## Symbols
 
 **Save times and memory than using string as index**  
