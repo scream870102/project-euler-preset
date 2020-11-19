@@ -18,10 +18,12 @@ def findAllFactor n
     factor=[] 
     for i in (1..(Integer.sqrt n))
         if n%i==0
-            other = n/i
             factor<<i
-            factor<<other if i!=other
+            factor<<n/i
         end
+    end
+    if (Math.sqrt n) == (Integer.sqrt n)
+        factor.delete_at(factor.index(Integer.sqrt n))
     end
     factor.length
 end
@@ -29,9 +31,10 @@ end
 def euler012
     i=1
     sum=0
+    tmp = 500*500
     loop do 
         sum+=i
-        return sum if(findAllFactor sum)>500
+        return sum if (sum>=tmp)&&(findAllFactor sum)>500
         i+=1
     end
     sum
