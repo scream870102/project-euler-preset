@@ -14,12 +14,11 @@
 # NOTE: Once the chain starts the terms are allowed to go above one million.
 def collatz n 
     return n/2 if n%2==0
-    return 3*n+1
+    3*n+1
 end
 
 def euler014
-    max=0
-    max_count = 0
+    max,max_count=0,0
     for i in (2..1000000)
         count = 0
         n = i
@@ -32,7 +31,7 @@ def euler014
             max = i
         end
     end
-    return max
+    max
 end
 
 puts euler014

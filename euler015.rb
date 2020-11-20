@@ -9,7 +9,7 @@ def factorial n
 end
 
 def euler015
-    return (factorial 40) / ((factorial 20) * (factorial 20))
+    (factorial 40) / ((factorial 20) * (factorial 20))
 end
 
 puts euler015

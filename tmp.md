@@ -3,21 +3,14 @@
 ## function for check if number is prime
 ```ruby
 def isPrime n
-  if n==2
-    return true
-  end
-  if n%2==0
-    return false
-  end
-  limit = Integer.sqrt n
-  i = 3
+  return true if n==2
+  return false if n%2==0
+  limit,i = Integer.sqrt(n),3
   while i<=limit
-    if n % i == 0
-      return false
-    end
+    return false if n % i == 0
     i+=2
   end
-  return true
+  true
 end
 ```
 
@@ -33,5 +26,14 @@ def findAllFactor n
         end
     end
     factor.length
+end
+```
+
+
+## function factorial 
+```ruby
+def factorial n
+    return 1 if n ==1
+    n* (factorial (n-1))
 end
 ```

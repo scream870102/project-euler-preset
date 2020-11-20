@@ -6,7 +6,7 @@
 def euler016
     sum=0
     (2**1000).to_s.split("").each{|i|sum+=i.to_i}
-    return sum
+    sum
 end
 
 puts euler016

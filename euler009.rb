@@ -16,9 +16,7 @@ def euler009
         b+=1
         next
       end
-      if a*a+b*b==c*c
-        return a*b*c
-      end
+      return a*b*c if a*a+b*b==c*c
       b+=1
     end
     a+=1

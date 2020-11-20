@@ -104,15 +104,10 @@ def euler013
     72107838435069186155435662884062257473692284509516
     20849603980134001723930671666823555245252804609722
     53503534226472524250874054075591789781264330331690"
-    sum = 0
-    s.each_line do |l|
-        sum+=l.to_i
-    end
+    sum,res = 0,""
+    s.each_line {|l|sum+=l.to_i}
     a=sum.to_s.split("")
-    res=""
-    for i in (0...10)
-        res+=a[i]
-    end
-    return res.to_i
+    (0...10).each{|i|res+=a[i]}
+    res.to_i
 end
 puts euler013

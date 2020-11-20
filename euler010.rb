@@ -2,30 +2,43 @@
 
 # Find the sum of all the primes below two million.
 
+# def isPrime n
+#   return true if n==2
+#   return false if n%2==0
+#   limit,i = Integer.sqrt(n),3
+#   while i<=limit
+#     return false if n % i == 0
+#     i+=2
+#   end
+#   true
+# end
+
+# def euler010
+#   sum = 0
+#   for i  in (2..2000000)
+#     sum += i if isPrime i
+#   end
+#   return sum
+# end
+
+# puts euler010
+
+
 def isPrime n
-  if n==2
-    return true
-  end
-  if n%2==0
-    return false
-  end
-  limit = Integer.sqrt n
-  i = 3
+  return true if n==2
+  return false if n%2==0
+  limit,i = Integer.sqrt(n),3
   while i<=limit
-    if n % i == 0
-      return false
-    end
+    return false if n % i == 0
     i+=2
   end
-  return true
+  true
 end
 
 def euler010
   sum = 0
-  for i  in (2..2000000)
-    sum += i if isPrime i
-  end
-  return sum
+  (2..2000000).each {|i|sum += i if isPrime i}
+  sum
 end
 
 puts euler010
