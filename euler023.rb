@@ -6,17 +6,7 @@
 # As 12 is the smallest abundant number, 1 + 2 + 3 + 4 + 6 = 16, the smallest number that can be written as the sum of two abundant numbers is 24. By mathematical analysis, it can be shown that all integers greater than 28123 can be written as the sum of two abundant numbers. However, this upper limit cannot be reduced any further by analysis even though it is known that the greatest number that cannot be expressed as the sum of two abundant numbers is less than this limit.
 
 # Find the sum of all the positive integers which cannot be written as the sum of two abundant numbers.
-def findAllFactor n
-    factor=[] 
-    for i in (1..(Integer.sqrt n))
-        if n%i==0
-            other = n/i
-            factor<<i
-            factor<<other if i!=other
-        end
-    end
-    factor
-end
+require "./euler_utils"
 
 def euler023
     abundant =[]

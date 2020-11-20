@@ -22,6 +22,7 @@ usefule for test
 - def
 - select
 - map
+- require
 
 ## Operator
 - \+
@@ -247,4 +248,26 @@ end
 ob = Animal.new("Jacky", 3)
 ```
 
+## File IO
+[Ref](https://adlerhsieh.com/blog/20150402-basic-file-manipulation-in-ruby)
 
+
+### read content 
+```ruby 
+File.read("p022_names.txt")
+```
+---
+
+## Ruby use external file 
+[Ref](https://techacademy.jp/magazine/21359)  
+
+`require`
+- Library `require "library name"`
+- Self code `require "./path/to/file"`
+
+---
+
+## Reverse Range Loop
+```ruby
+  10.downto(2).each{|i|puts i }
+```

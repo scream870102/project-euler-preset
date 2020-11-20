@@ -57,12 +57,7 @@
 # We can see that 28 is the first triangle number to have over five divisors.
 
 # What is the value of the first triangle number to have over five hundred divisors?
-def findAllFactor n
-    factor=[] 
-    (1..(Integer.sqrt n)).each {|i|factor<<i<<n/i if n%i==0}
-    factor.delete_at(factor.index(Integer.sqrt n)) if (Math.sqrt n) == (Integer.sqrt n)
-    factor.length
-end
+require "./euler_utils"
 
 def euler012
     i=1
@@ -70,7 +65,7 @@ def euler012
     tmp = 500*500
     loop do 
         sum+=i
-        return sum if (sum>=tmp)&&(findAllFactor sum)>500
+        return sum if (sum>=tmp)&&(findAllFactor sum).length>500
         i+=1
     end
     sum

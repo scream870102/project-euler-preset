@@ -3,18 +3,6 @@
 
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
-# def euler002
-#   sum,a,b=0,1,2
-#   while b<4000000
-#     a,b=b,a+b
-#     if a%2==0
-#       sum+=a
-#     end
-#   end
-#   return sum
-# end
-
-# puts euler002
 
 def euler002
   sum,a,b=0,1,2

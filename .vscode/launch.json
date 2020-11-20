@@ -8,7 +8,7 @@
             "name": "Debug Local File",
             "type": "Ruby",
             "request": "launch",
-            "program": "${workspaceRoot}/euler023.rb"
+            "program": "${workspaceRoot}/euler026.rb"
         }
     ]
 }

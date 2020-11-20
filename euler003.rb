@@ -33,18 +33,8 @@
 # end
 # print euler003
 
+require "./euler_utils"
 Test=600851475143
-
-def isPrime n
-  return true if n==2
-  return false if n%2==0
-  limit,i = Integer.sqrt(n),3
-  while i<=limit
-    return false if n % i == 0
-    i+=2
-  end
-  true
-end
 
 def euler003
   i=1

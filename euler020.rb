@@ -5,10 +5,7 @@
 # and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 
 # Find the sum of the digits in the number 100!
-def factorial n
-  return 1 if n ==1
-  n* (factorial (n-1))
-end
+require "./euler_utils"
 
 def euler020
   sum = 0

@@ -58,17 +58,3 @@ def euler018
 end
 
 puts euler018
-# sum = array[0][0].to_i
-# c=0
-# for i in (0...14)
-#     max=0
-#     if array[i+1][c].to_i>array[i+1][c+1].to_i
-#         max = array[i+1][c].to_i
-#     else
-#         max = array[i+1][c+1].to_i
-#         c+=1
-#     end
-#     puts max
-#     sum+=max
-# end
-# return sum
